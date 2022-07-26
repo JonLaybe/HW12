@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.devise{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.label-item{
+    margin: 5px;
+    font-size: 20px;
+}
+.devise-items{
+    height: 300px;
+}
+.devise-items{
+    margin: 30px;
+}
+.product{
+    cursor: pointer;
+    border: 2px solid blue;
+    width: 150px;
+    height: auto;
+    
+    text-align: center;
+    margin: 5px;
+    padding: 5px 0px;
+}
+input[type="radio"], .contant-iPhone, .contant-Honor, .contant-iPad, .contant-AppleWatch, .contant-iMac, .fa-check {
+    display: none;
+}
+
+.input-iphone:checked ~ .devise-items > .contant-iPhone,
+.input-ipad:checked ~ .devise-items > .contant-iPad,
+.input-honor:checked ~ .devise-items > .contant-Honor,
+.input-appleWatch:checked ~ .devise-items > .contant-AppleWatch,
+.input-imac ~ .devise-items > .contant-iMac {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input[type="radio"]:checked + label > .fa-check{
+    display: inline;
+}
+input[type="radio"]:checked + label {
+    text-decoration: underline;
+}
